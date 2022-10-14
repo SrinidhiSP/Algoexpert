@@ -1,0 +1,14 @@
+def tournamentWinner(comp, res):
+    points={}
+    curr_winner='',0
+    for c, r in zip(comp,res):
+        winner = c[not r]
+        loser = c[r]
+
+        if winner not in points: points[winner] =0
+        points[winner]+=3
+        #print(points[winner])
+        if points[winner] > curr_winner[1]:
+            curr_winner = winner, points[winner]
+
+    return curr_winner[0]
