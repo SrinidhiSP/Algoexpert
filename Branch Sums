@@ -1,0 +1,24 @@
+# This is the class of the input root. Do not edit it.
+class BinaryTree:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+def branchSums(root):
+    sum = []
+    calculatesums(root, 0, sum)
+    return sum
+
+def calculatesums(node, count, sum):
+    if node is None:
+        return 
+    new_count = count + node.value
+    if node.left is None and node.right is None:
+        sum.append(new_count)
+        return
+    calculatesums(node.left, new_count, sum)
+    calculatesums(node.right, new_count, sum)
+    # Write your code here.
+    
