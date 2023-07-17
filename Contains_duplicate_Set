@@ -1,0 +1,9 @@
+Contains Duplicate using SET
+
+CODE:
+class Solution(object):
+    def containsDuplicate(self, nums):
+        print(set(nums))
+        if len(set(nums)) != len(nums):
+            return True
+        return False
