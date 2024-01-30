@@ -1,3 +1,4 @@
+# Python code to reverse digits
 class Solution:
     def reversedigs(x:int) -> int:
         result, remaining_x = 0, abs(x)
