@@ -1,3 +1,4 @@
+#Product of array without self
 class Solution:
     def arrayprod_noself(self, nums:List[int]) -> List[int]:
         res=[1]*(len(nums))
